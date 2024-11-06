@@ -1,2 +1,2 @@
-# disinformation-hub.github.io
+# disinformation-hub
 Website for the Disinformation Hub.
