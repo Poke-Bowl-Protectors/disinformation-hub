@@ -1,8 +1,6 @@
 title: Disinformation Hub
 description: A website for the Disinformation Hub.
-url: "https://disinformation-hub.github.io"
 google_analytics:
 theme: jekyll-theme-tactile
-markdown: kramdown
 gems:
   - jekyll-mentions
