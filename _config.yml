@@ -1,7 +1,7 @@
 title: Disinformation Hub
 description: A website for the Disinformation Hub.
 google_analytics:
-theme: minima
+theme: jekyll-theme-tactile
 markdown: kramdown
 gems:
   - jekyll-mentions
