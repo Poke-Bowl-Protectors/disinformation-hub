@@ -9,4 +9,3 @@ client: Start Bootstrap
 category: Web Development
 description: Dive into the world of deepfakes. Where you will see all of the AI-generated images that look believable, but are actually fake. Broaden your exposure of what is really real/fake and why. What if it's not but you thought it was?
 ---
-<img src="/img/portfolio/deepfakeicon.png" alt="image-alt" width="900" height="650">
