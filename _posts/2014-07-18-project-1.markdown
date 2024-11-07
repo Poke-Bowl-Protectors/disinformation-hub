@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2014-07-18
-img: Ai_Deepfake_Icon.png
+img: cabin.png
 alt: image-alt
 project-date: Nov 2024
 client: Start Bootstrap
