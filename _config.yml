@@ -2,7 +2,7 @@
 title: Disinformation Hub
 email: kaigar21@hawaii.edu
 url: https://poke-bowl-protectors.github.io/disinformation-hub/
-baseurl: ""
+baseurl: "/disinformation-hub"
 description: "An educational platform to teach students to use critical thinking skills to identify mis/disinformation."
 keywords: "education, information, security"
 skills: ""
@@ -62,6 +62,9 @@ credits: ''
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Suppress warnings
+favicon: ""
 
 #for posts
 defaults:

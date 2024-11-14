@@ -3,14 +3,13 @@ layout: game_layout
 title: Game
 permalink: /game.html
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl | prepend: '/' }}style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,24 +17,30 @@ permalink: /game.html
       margin: 0;
       padding: 0;
     }
+
     h1 {
       margin-top: 20px;
       font-size: 2em;
     }
+
     .slideshow {
       position: relative;
       max-width: 600px;
       margin: 20px auto;
     }
+
     .slide {
       display: none;
     }
+
     .active {
       display: block;
     }
+
     .buttons {
       margin-top: 10px;
     }
+
     .buttons button {
       padding: 10px 20px;
       font-size: 16px;
@@ -46,9 +51,11 @@ permalink: /game.html
       background-color: #007bff;
       color: white;
     }
+
     .buttons button:hover {
       background-color: #0056b3;
     }
+
     .info {
       margin-top: 20px;
       padding: 10px;
@@ -56,60 +63,61 @@ permalink: /game.html
       border-radius: 10px;
       font-size: 16px;
     }
+
     .info a {
       color: #0056b3;
       text-decoration: none;
     }
+
     .info a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>{{ page.title }}</h1>
-  <div class="slideshow">
-    <!-- Slide 1 -->
-    <div class="slide active">
-      <img src="/img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
-      <p>Would you say this is real?</p>
-      <div class="buttons">
-        <button onclick="nextSlide()">Yes!</button>
-        <button onclick="nextSlide()">No</button>
-      </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="slide">
-      <img src="/img/Real/real2.jpg" alt="Slide 2" style="width:100%">
-      <p>Does this look real?</p>
-      <div class="buttons">
-        <button onclick="nextSlide()">Yes!</button>
-        <button onclick="nextSlide()">No</button>
-      </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="slide">
-      <img src="/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
-      <p>Is this fake?</p>
-      <div class="buttons">
-        <button onclick="nextSlide()">Yes!</button>
-        <button onclick="nextSlide()">No</button>
-      </div>
+<h1>{{ page.title }}</h1>
+<div class="slideshow">
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <img src="{{ site.baseurl | prepend: '/' }}img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
+    <p>Would you say this is real?</p>
+    <div class="buttons">
+      <button onclick="nextSlide()">Yes!</button>
+      <button onclick="nextSlide()">No</button>
     </div>
   </div>
-  <div class="info">
-    Please visit our <a href="/info.html">"Info Sesh"</a> page to learn more!
+  <!-- Slide 2 -->
+  <div class="slide">
+    <img src="{{ site.baseurl | prepend: '/' }}img/Real/real2.jpg" alt="Slide 2" style="width:100%">
+    <p>Does this look real?</p>
+    <div class="buttons">
+      <button onclick="nextSlide()">Yes!</button>
+      <button onclick="nextSlide()">No</button>
+    </div>
   </div>
+  <!-- Slide 3 -->
+  <div class="slide">
+    <img src="{{ site.baseurl | prepend: '/' }}img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
+    <p>Is this fake?</p>
+    <div class="buttons">
+      <button onclick="nextSlide()">Yes!</button>
+      <button onclick="nextSlide()">No</button>
+    </div>
+  </div>
+</div>
+<div class="info">
+  Please visit our <a href="{{ site.baseurl | prepend: '/' }}info.html">"Info Sesh"</a> page to learn more!
+</div>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
 
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-  </script>
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+</script>
 </body>
 </html>
-

@@ -8,4 +8,5 @@ project-date: Nov 2024
 client: Start Bootstrap
 category: Web Development
 description: Dive into the world of deepfakes. Where you will see all of the AI-generated images that look believable, but are actually fake. Broaden your exposure of what is really real/fake and why. What if it's not but you thought it was?
+permalink: /2014/07/18/project-1/
 ---
