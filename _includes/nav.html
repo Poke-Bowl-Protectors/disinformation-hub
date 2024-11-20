@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <!-- Redirect the brand link to the home page -->
-      <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,16 +17,16 @@
       <ul class="nav navbar-nav navbar-right">
         <!-- Links redirect to sections on the home page -->
         <li class="page-scroll">
-          <a href="{{ '/' }}#portfolio">Portfolio</a>
+          <a href="{{ site.baseurl }}/#portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ '/game.html' }}">Game</a>
+          <a class="nav-link" href="{{ site.baseurl }}/game.html">Game</a>
         </li>
         <li class="page-scroll">
-          <a href="{{ '/' }}#about">About</a>
+          <a href="{{ site.baseurl }}/#about">About</a>
         </li>
         <li class="page-scroll">
-          <a href="{{ '/' }}#contact">Contact</a>
+          <a href="{{ site.baseurl }}/#contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -34,4 +34,3 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
-
