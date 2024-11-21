@@ -1,0 +1,116 @@
+---
+layout: info_layout
+title: INFO SESH
+permalink: /info.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .left-column, .right-column {
+      width: 48%;
+      padding: 10px;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+    }
+    .left-column h2, .right-column h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .left-column p, .right-column p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    .resources {
+      margin-top: 30px;
+      background-color: #a8e6cf;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .resources h2 {
+      font-size: 1.5em;
+    }
+    .resources ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .resources ul li {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+    .resources a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    .resources a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<h1>{{ page.title }}</h1>
+
+<div class="content-wrapper">
+  <!-- Left Column -->
+  <div class="left-column">
+    <h2>What is Mis/Disinformation?</h2>
+    <p><strong>Misinformation</strong> is false or misleading information shared without the intent to deceive. </p>
+    <p><strong>Disinformation</strong> is false information shared deliberately to mislead people.</p>
+
+    <h2>Why is it important to learn about?</h2>
+    <p>When we fail to identify the truth, society becomes vulnerable to confusion, division, and mistrust, weakening our ability to work together, make informed decisions, and address real issues effectively.</p>
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-column">
+    <h2>Recognizing Red Flags</h2>
+    <p><strong>Headlines That Seem “Too Good to Be True”:</strong> Exaggerated or sensational titles are often created to grab attention but might not match the content.</p>
+    <p><strong>No Clear Source:</strong> Information without clear, reputable sources should be questioned. Who is saying this, and why should we believe them?</p>
+    <p><strong>Watch Out for AI Generated Content:</strong> AI generated images and videos will contain tells like unnatural eyes or hands, blurry backgrounds, asymmetrical features, and unusual lighting or shadows.</p>
+    <p><strong>Check for Grammar and Spelling Errors:</strong> AI generated images and videos often have incorrect grammar and spelling.</p>
+  </div>
+</div>
+
+<div class="resources">
+  <h2>Resources for Fact-Checking and Learning More:</h2>
+
+  <h3>Fact-Checking and Verification:</h3>
+  <ul>
+    <li><a href="https://www.snopes.com" target="_blank">snopes.com</a> - Investigates rumors, myths, and misinformation online.</li>
+    <li><a href="https://www.mediawise.org" target="_blank">mediawise.org</a> - Teaches people how to identify misinformation online with resources specifically for teens and seniors.</li>
+  </ul>
+
+  <h3>Image and Video Verification:</h3>
+  <ul>
+    <li><a href="https://images.google.com" target="_blank">images.google.com</a> - Reverse image search to discover original sources of images.</li>
+    <li><a href="https://www.invid-project.eu" target="_blank">invid-project.edu</a> - Browser plugin for video verification.</li>
+  </ul>
+
+  <h3>Education Platforms:</h3>
+  <ul>
+    <li><a href="https://www.commonsensemedia.org" target="_blank">commonsensemedia.org</a> - Educational resources to help kids and families develop media literacy and safe internet habits.</li>
+    <li><a href="https://cor.stanford.edu" target="_blank">cor.stanford.edu</a> - Free lessons and assessments designed to help students evaluate the credibility of online content.</li>
+  </ul>
+</div>
+</body>
+</html>
