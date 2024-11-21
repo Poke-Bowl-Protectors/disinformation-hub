@@ -1,24 +1,24 @@
 <!-- jQuery Version 1.11.0 -->
-<script src="{{ " js/jquery-1.11.0.js" }}"></script>
+<script src="{{ 'js/jquery-1.11.0.js' | relative_url }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ " js/bootstrap.min.js" }}"></script>
+<script src="{{ 'js/bootstrap.min.js' | relative_url }}"></script>
 
 <!-- Plugin JavaScript -->
-<script src="{{ " js/jquery.easing.min.js" }}"></script>
-<script src="{{ " js/classie.js" }}"></script>
-<script src="{{ " js/cbpAnimatedHeader.js" }}"></script>
+<script src="{{ 'js/jquery.easing.min.js' | relative_url }}"></script>
+<script src="{{ 'js/classie.js' | relative_url }}"></script>
+<script src="{{ 'js/cbpAnimatedHeader.js' | relative_url }}"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="{{ " js/jqBootstrapValidation.js" }}"></script>
+<script src="{{ 'js/jqBootstrapValidation.js' | relative_url }}"></script>
 {% if site.contact == "static" %}
-<script src="{{ " js/feedback_to_me_static.js" }}"></script>
+<script src="{{ 'js/feedback_to_me_static.js' | relative_url }}"></script>
 {% else %}
-<script src="{{ " js/feedback_to_me.js" }}"></script>
+<script src="{{ 'js/feedback_to_me.js' | relative_url }}"></script>
 {% endif %}
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ " js/freelancer.js" }}"></script>
+<script src="{{ 'js/freelancer.js' | relative_url }}"></script>
 
 {% if site.contact == "disqus" %}
 <!-- Disqus Stuff -->
