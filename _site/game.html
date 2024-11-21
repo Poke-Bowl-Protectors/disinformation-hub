@@ -179,46 +179,41 @@
   <!-- Slide 1 -->
   <div class="slide active">
     <img src="/disinformation-hub/img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
-    <p>Would you say this is real?</p>
     <div class="buttons">
-      <button>Yes!</button>
-      <button>No</button>
+      <button>REAL</button>
+      <button>FAKE</button>
     </div>
   </div>
   <!-- Slide 2 -->
   <div class="slide">
     <img src="/disinformation-hub/img/Real/real2.jpg" alt="Slide 2" style="width:100%">
-    <p>Does this look real?</p>
     <div class="buttons">
-      <button>Yes!</button>
-      <button>No</button>
+      <button>REAL</button>
+      <button>FAKE</button>
     </div>
   </div>
   <!-- Slide 3 -->
   <div class="slide">
     <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
-    <p>Is this fake?</p>
     <div class="buttons">
-      <button>Yes!</button>
-      <button>No</button>
+      <button>REAL</button>
+      <button>FAKE</button>
     </div>
   </div>
   <!-- Slide 4 -->
   <div class="slide">
     <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 4" style="width:100%">
-    <p>Is this fake?</p>
     <div class="buttons">
-      <button>Yes!</button>
-      <button>No</button>
+      <button>REAL</button>
+      <button>FAKE</button>
     </div>
   </div>
   <!-- Slide 5 -->
   <div class="slide">
     <img src="/disinformation-hub/img/Fake/fake5.jpeg" alt="Slide 5" style="width:100%">
-    <p>Is this fake?</p>
     <div class="buttons">
-      <button>Yes!</button>
-      <button>No</button>
+      <button>REAL</button>
+      <button>FAKE</button>
     </div>
   </div>
 </div>
@@ -275,7 +270,7 @@
         const folderName = imagePath.split('/').slice(-2, -1)[0]; // Extract folder name ('Real' or 'Fake')
 
         const isFake = folderName === 'Fake'; // Determine correctness based on folder
-        const userSelectedFake = button.textContent === 'No'; // User's choice
+        const userSelectedFake = button.textContent === 'FAKE'; // User's choice
 
         if (isFake === userSelectedFake) {
           showPopup(`Correct! This image is ${folderName.toLowerCase()}.`);
