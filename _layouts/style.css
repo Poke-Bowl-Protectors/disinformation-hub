@@ -1,2 +1,18 @@
 {% include css/bootstrap.min.css %}
 {% include css/main.css %}
+
+#game-page {
+  padding-top: 120px;
+}
+
+#feedback {
+  justify-content: center;
+  text-align: center;
+}
+
+#feedbackForm {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 0px;
+}
