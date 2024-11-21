@@ -11,8 +11,13 @@
 }
 
 #feedbackForm {
-  margin: 0 auto;
+  /*background-color: rgba(0, 255, 0, 0.2);*/
+  margin-left: 270px;
   width: 100%;
   max-width: 600px;
-  padding: 0px;
+  white-space: nowrap;
+}
+
+.d-inline-block {
+  padding-left: 10px;
 }

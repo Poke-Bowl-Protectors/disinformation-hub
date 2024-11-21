@@ -9,13 +9,13 @@
       </div>
     </div>
     <!-- Feedback Form -->
-    <div class="row justify-content-center">
+    <div class="row">
       <div class="col-lg-12">
         <form action="//formspree.io/{{ site.email }}" method="POST" name="feedbackForm" id="feedbackForm" novalidate>
 
           <!-- Rating Section -->
-          <div class="row control-group mb-12">
-            <div class="form-group col-12 text-center">
+          <div class="row control-group mb-12 justify-content-center">
+            <div class="form-group text-center">
               <h4>How satisfied are you with your experience?</h4>
               <div class="rating-options d-flex justify-content-between">
                 <label class="d-inline-block">
@@ -35,12 +35,12 @@
                 </label>
               </div>
               <p class="help-block text-danger"></p>
-            </div>
+<!--            </div>-->
           </div>
 
           <!-- Comments Section -->
           <div class="row control-group mb-4">
-            <div class="form-group col-12">
+            <div class="form-group col-12 mx-auto">
               <label for="comments" class="form-label">Comments</label>
               <textarea rows="5" name="comments" class="form-control" placeholder="Please share your feedback here..." id="comments" required></textarea>
               <p class="help-block text-danger"></p>
@@ -59,7 +59,7 @@
               <button type="submit" class="btn btn-success btn-lg">Send</button>
             </div>
           </div>
-
+          </div>
         </form>
       </div>
     </div>
