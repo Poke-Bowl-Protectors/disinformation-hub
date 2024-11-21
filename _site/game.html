@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Disinformation Hub</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="An educational platform to teach students to use critical thinking skills to identify mis/disinformation.">
+  <meta name="keywords" content="education, information, security" />
+  
+  <meta name="author" content="Social Cyber Team">
+  <link rel="canonical" href="http://localhost:4000/game.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
+
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href=" style.css">
+
+  <!-- Google verification -->
+  
+
+  <!-- Bing Verification -->
+  
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href=" css/font-awesome/css/all.min.css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body id="game-page" class="game">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Redirect the brand link to the home page -->
+      <a class="navbar-brand" href="/disinformation-hub/">Disinformation Hub</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Links redirect to sections on the home page -->
+        <li class="page-scroll">
+          <a href="/disinformation-hub/#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/disinformation-hub/game.html">Game</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/disinformation-hub/info.html">Info Sesh</a>
+        </li>
+        <li class="page-scroll">
+          <a href="/disinformation-hub/#about">About</a>
+        </li>
+        <li class="page-scroll">
+          <a href="/disinformation-hub/#feedback">Feedback</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+
+<!-- Main Content -->
+<main>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="/disinformation-hub/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+    .slideshow {
+      position: relative;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .slide {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+    }
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+    .info {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #a8e6cf;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .info a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Popup Styles */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: none; /* Hidden by default */
+      text-align: center;
+      border-radius: 8px;
+    }
+    .popup-content {
+      margin: 10px 0;
+    }
+    .hidden {
+      display: none;
+    }
+    #popup-close {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #popup-close:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<h1>Game</h1>
+<div class="slideshow">
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <img src="/disinformation-hub/img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
+    <div class="buttons">
+      <button>REAL</button>
+      <button>FAKE</button>
+    </div>
+  </div>
+  <!-- Slide 2 -->
+  <div class="slide">
+    <img src="/disinformation-hub/img/Real/real2.jpg" alt="Slide 2" style="width:100%">
+    <div class="buttons">
+      <button>REAL</button>
+      <button>FAKE</button>
+    </div>
+  </div>
+  <!-- Slide 3 -->
+  <div class="slide">
+    <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
+    <div class="buttons">
+      <button>REAL</button>
+      <button>FAKE</button>
+    </div>
+  </div>
+  <!-- Slide 4 -->
+  <div class="slide">
+    <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 4" style="width:100%">
+    <div class="buttons">
+      <button>REAL</button>
+      <button>FAKE</button>
+    </div>
+  </div>
+  <!-- Slide 5 -->
+  <div class="slide">
+    <img src="/disinformation-hub/img/Fake/fake5.jpeg" alt="Slide 5" style="width:100%">
+    <div class="buttons">
+      <button>REAL</button>
+      <button>FAKE</button>
+    </div>
+  </div>
+</div>
+<div class="info">
+  Please visit our <a href="/disinformation-hub/info.html">"Info Sesh"</a> page to learn more!
+</div>
+
+<!-- Popup HTML -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <p id="popup-message"></p>
+    <button id="popup-close">Close</button>
+  </div>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  // Function to show the popup
+  function showPopup(message) {
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+    popupMessage.textContent = message;
+    popup.classList.remove('hidden');
+    popup.style.display = 'block';
+  }
+
+  // Function to hide the popup and move to the next slide
+  function hidePopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.add('hidden');
+    popup.style.display = 'none';
+
+    // Move to the next slide
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide if at the end
+    slides[currentSlide].classList.add('active');
+  }
+
+  // Attach event listeners when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    const closeButton = document.getElementById('popup-close');
+    if (closeButton) {
+      closeButton.addEventListener('click', hidePopup); // Close popup and move to the next slide
+    }
+
+    // Attach popup functionality to the Yes/No buttons
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach((button) => {
+      button.addEventListener('click', function () {
+        const currentImage = slides[currentSlide].querySelector('img');
+        const imagePath = currentImage.src; // Full image path
+        const folderName = imagePath.split('/').slice(-2, -1)[0]; // Extract folder name ('Real' or 'Fake')
+
+        const isFake = folderName === 'Fake'; // Determine correctness based on folder
+        const userSelectedFake = button.textContent === 'FAKE'; // User's choice
+
+        if (isFake === userSelectedFake) {
+          showPopup(`Correct! This image is ${folderName.toLowerCase()}.`);
+        } else {
+          showPopup(`Sorry, that is incorrect. This image is ${folderName.toLowerCase()}.`);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
+</main>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>Hawai'i</h3>
+          <p>
+            
+          </p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3></h3>
+          <ul class="list-inline">
+            
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy;  2024
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+  <a class="btn btn-primary" href="#page-top">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+</div>
+
+<!-- jQuery Version 1.11.0 -->
+<script src="/disinformation-hub/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/disinformation-hub/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/disinformation-hub/js/jquery.easing.min.js"></script>
+<script src="/disinformation-hub/js/classie.js"></script>
+<script src="/disinformation-hub/js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="/disinformation-hub/js/jqBootstrapValidation.js"></script>
+
+<script src="/disinformation-hub/js/feedback_to_me_static.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+<script src="/disinformation-hub/js/freelancer.js"></script>
+
+
+</body>
+</html>
