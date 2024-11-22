@@ -138,151 +138,74 @@
     .info a:hover {
       text-decoration: underline;
     }
-
-    /* Popup Styles */
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      border: 1px solid #ccc;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      display: none; /* Hidden by default */
-      text-align: center;
-      border-radius: 8px;
-    }
-    .popup-content {
-      margin: 10px 0;
-    }
-    .hidden {
-      display: none;
-    }
-    #popup-close {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #popup-close:hover {
-      background-color: #0056b3;
-    }
   </style>
 </head>
 <body>
-<h1>Game</h1>
-<div class="slideshow">
-  <!-- Slide 1 -->
-  <div class="slide active">
-    <img src="/disinformation-hub/img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
-    <div class="buttons">
-      <button>REAL</button>
-      <button>FAKE</button>
+  <h1>Game</h1>
+  <div class="slideshow">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="/disinformation-hub/img/Fake/fake1.jpeg" alt="Slide 1" style="width:100%">
+      <p>Would you say this is real?</p>
+      <div class="buttons">
+        <button onclick="nextSlide()">Yes!</button>
+        <button onclick="nextSlide()">No</button>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="/disinformation-hub/img/Real/real2.jpg" alt="Slide 2" style="width:100%">
+      <p>Does this look real?</p>
+      <div class="buttons">
+        <button onclick="nextSlide()">Yes!</button>
+        <button onclick="nextSlide()">No</button>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
+      <p>Is this fake?</p>
+      <div class="buttons">
+        <button onclick="nextSlide()">Yes!</button>
+        <button onclick="nextSlide()">No</button>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide">
+      <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 4" style="width:100%">
+      <p>Is this fake?</p>
+      <div class="buttons">
+        <button onclick="nextSlide()">Yes!</button>
+        <button onclick="nextSlide()">No</button>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide">
+      <img src="/disinformation-hub/img/Fake/fake5.jpeg" alt="Slide 5" style="width:100%">
+      <p>Is this fake?</p>
+      <div class="buttons">
+        <button onclick="nextSlide()">Yes!</button>
+        <button onclick="nextSlide()">No</button>
+      </div>
     </div>
   </div>
-  <!-- Slide 2 -->
-  <div class="slide">
-    <img src="/disinformation-hub/img/Real/real2.jpg" alt="Slide 2" style="width:100%">
-    <div class="buttons">
-      <button>REAL</button>
-      <button>FAKE</button>
-    </div>
+  <div class="info">
+    Please visit our <a href="/disinformation-hub/info.html">"Info Sesh"</a> page to learn more!
   </div>
-  <!-- Slide 3 -->
-  <div class="slide">
-    <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
-    <div class="buttons">
-      <button>REAL</button>
-      <button>FAKE</button>
-    </div>
-  </div>
-  <!-- Slide 4 -->
-  <div class="slide">
-    <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 4" style="width:100%">
-    <div class="buttons">
-      <button>REAL</button>
-      <button>FAKE</button>
-    </div>
-  </div>
-  <!-- Slide 5 -->
-  <div class="slide">
-    <img src="/disinformation-hub/img/Fake/fake5.jpeg" alt="Slide 5" style="width:100%">
-    <div class="buttons">
-      <button>REAL</button>
-      <button>FAKE</button>
-    </div>
-  </div>
-</div>
-<div class="info">
-  Please visit our <a href="/disinformation-hub/info.html">"Info Sesh"</a> page to learn more!
-</div>
 
-<!-- Popup HTML -->
-<div id="popup" class="popup hidden">
-  <div class="popup-content">
-    <p id="popup-message"></p>
-    <button id="popup-close">Close</button>
-  </div>
-</div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
 
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  // Function to show the popup
-  function showPopup(message) {
-    const popup = document.getElementById('popup');
-    const popupMessage = document.getElementById('popup-message');
-    popupMessage.textContent = message;
-    popup.classList.remove('hidden');
-    popup.style.display = 'block';
-  }
-
-  // Function to hide the popup and move to the next slide
-  function hidePopup() {
-    const popup = document.getElementById('popup');
-    popup.classList.add('hidden');
-    popup.style.display = 'none';
-
-    // Move to the next slide
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide if at the end
-    slides[currentSlide].classList.add('active');
-  }
-
-  // Attach event listeners when the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', function () {
-    const closeButton = document.getElementById('popup-close');
-    if (closeButton) {
-      closeButton.addEventListener('click', hidePopup); // Close popup and move to the next slide
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
     }
-
-    // Attach popup functionality to the Yes/No buttons
-    const buttons = document.querySelectorAll('.buttons button');
-    buttons.forEach((button) => {
-      button.addEventListener('click', function () {
-        const currentImage = slides[currentSlide].querySelector('img');
-        const imagePath = currentImage.src; // Full image path
-        const folderName = imagePath.split('/').slice(-2, -1)[0]; // Extract folder name ('Real' or 'Fake')
-
-        const isFake = folderName === 'Fake'; // Determine correctness based on folder
-        const userSelectedFake = button.textContent === 'FAKE'; // User's choice
-
-        if (isFake === userSelectedFake) {
-          showPopup(`Correct! This image is ${folderName.toLowerCase()}.`);
-        } else {
-          showPopup(`Sorry, that is incorrect. This image is ${folderName.toLowerCase()}.`);
-        }
-      });
-    });
-  });
-</script>
+  </script>
 </body>
 </html>
+
 </main>
 
 <!-- Footer -->
