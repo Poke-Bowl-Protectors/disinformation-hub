@@ -40,3 +40,34 @@ layout: style
 #popup-close:hover {
   background-color: #0056b3;
 }
+
+/* Ensure the header image is full width and responsive */
+header .container-fluid {
+  padding: 0;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+/* Position the title and style it */
+.intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.name {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.star-light {
+  margin: 20px auto;
+  width: 50px;
+  border: 1px solid #fff;
+}
