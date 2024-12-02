@@ -1,35 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Section</title>
+  <style>
+    /* Feedback Section Styling */
+    #feedback h4 {
+      color: #1b1b16 !important; /* Targets h4 specifically in #feedback */
+    }
+    #feedback .d-line {
+      color: #1b1b16 !important; /* Targets .d-line specifically in #feedback */
+    }
+    .btn-success {
+      color: #ffffff;
+      background-color: #1b1b16;
+      border-color: #1b1b16;
+    }
+  </style>
+</head>
+<body>
 <!-- Feedback Section -->
 <section id="feedback">
   <div class="container">
+    <!-- Section Header -->
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>We Value Your Feedback</h2>
         <hr class="star-primary">
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <!-- Feedback Form -->
+    <!-- Feedback Form -->
+    <div class="row">
+      <div class="col-lg-12">
         <form action="//formspree.io/{{ site.email }}" method="POST" name="feedbackForm" id="feedbackForm" novalidate>
 
           <!-- Rating Section -->
-          <div class="row control-group mb-4">
-            <div class="form-group col-12">
+          <div class="row control-group mb-12 justify-content-center">
+            <div class="form-group text-center">
               <h4>How satisfied are you with your experience?</h4>
               <div class="rating-options d-flex justify-content-between">
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="5" required> 5 - Very Satisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="4"> 4 - Satisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="3"> 3 - Okay
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="2"> 2 - Unsatisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="1"> 1 - Very Unsatisfied
                 </label>
               </div>
@@ -39,7 +62,7 @@
 
           <!-- Comments Section -->
           <div class="row control-group mb-4">
-            <div class="form-group col-12">
+            <div class="form-group col-12 mx-auto">
               <label for="comments" class="form-label">Comments</label>
               <textarea rows="5" name="comments" class="form-control" placeholder="Please share your feedback here..." id="comments" required></textarea>
               <p class="help-block text-danger"></p>
@@ -49,7 +72,7 @@
           <!-- Hidden Inputs for Formspree -->
           <div>
             <input type="hidden" name="_subject" value="New feedback submission!">
-            <input type="text" name="_gotcha" style="display:none" />
+            <input type="text" name="_gotcha" style="display:none"/>
           </div>
 
           <!-- Submit Button -->
@@ -58,9 +81,10 @@
               <button type="submit" class="btn btn-success btn-lg">Send</button>
             </div>
           </div>
-
         </form>
       </div>
     </div>
   </div>
 </section>
+</body>
+</html>

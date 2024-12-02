@@ -1,15 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disinformation Hub</title>
+  <style>
+    /* Star-light HR styling */
+    hr.star-light:after {
+      background-color: #1b1b16;
+    }
+  </style>
+</head>
+<body>
 <!-- Header -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <img class="img-responsive" src="img/profile.png" alt="profile-pic" />
-        <div class="intro-text">
-          <span class="name">{{ site.title }}</span>
+<header style="height: 100vh;">
+  <div class="container-fluid" style="padding: 0; width: 100%; position: relative; height: 100%; overflow: hidden;">
+    <div class="row" style="margin: 0;">
+      <div class="col-lg-12" style="padding: 0;">
+        <!-- Make the image full-width and full height -->
+        <img class="img-responsive" src="img/disinformation.jpg" alt="disinformation-pic" style="width: 100%; height: 100%; object-fit: cover;" />
+        <!-- Overlay Text -->
+        <div class="intro-text text-center" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); color: white; z-index: 1;">
+          <span class="name" style="font-size: 3rem; font-weight: bold;">Disinformation Hub</span>
           <hr class="star-light" />
-          <span class="skills">{{ site.skills }}</span>
         </div>
       </div>
     </div>
   </div>
 </header>
+</body>
+</html>

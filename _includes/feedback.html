@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Section</title>
+  <style>
+    /* Feedback Section Styling */
+    #feedback h4 {
+      color: #1b1b16 !important; /* Targets h4 specifically in #feedback */
+    }
+    #feedback .d-line {
+      color: #1b1b16 !important; /* Targets .d-line specifically in #feedback */
+    }
+    .btn-success {
+      color: #ffffff;
+      background-color: #1b1b16;
+      border-color: #1b1b16;
+    }
+  </style>
+</head>
+<body>
 <!-- Feedback Section -->
 <section id="feedback">
   <div class="container">
@@ -18,24 +40,24 @@
             <div class="form-group text-center">
               <h4>How satisfied are you with your experience?</h4>
               <div class="rating-options d-flex justify-content-between">
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="5" required> 5 - Very Satisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="4"> 4 - Satisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="3"> 3 - Okay
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="2"> 2 - Unsatisfied
                 </label>
-                <label class="d-inline-block">
+                <label class="d-inline-block d-line">
                   <input type="radio" name="rating" value="1"> 1 - Very Unsatisfied
                 </label>
               </div>
               <p class="help-block text-danger"></p>
-<!--            </div>-->
+            </div>
           </div>
 
           <!-- Comments Section -->
@@ -59,9 +81,10 @@
               <button type="submit" class="btn btn-success btn-lg">Send</button>
             </div>
           </div>
-          </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+</body>
+</html>
