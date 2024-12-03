@@ -303,6 +303,15 @@
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
 
+    // Define explanations for each image
+    const explanations = {
+      "fake1.jpeg": "The person looks real but the sign they hold contains several mistakes. These mistakes include misspelling and too good to be true statements.",
+      "real2.jpg": "This is a real photo of Chief's Tight End Travis Kelce.",
+      "waikiki_old.jpg": "This photo is real and shows Waikiki in the old days.",
+      "fake4.jpeg": "Although this picture looks believable, the physical features of Waikiki and Diamond Head are different to reality.",
+      "fake5.jpeg": "The background has been artificially blurred to hide inconsistencies."
+    };
+
     // Function to show the popup
     function showPopup(message) {
       const popup = document.getElementById('popup');
@@ -331,21 +340,30 @@
         closeButton.addEventListener('click', hidePopup); // Close popup and move to the next slide
       }
 
-      // Attach popup functionality to the Yes/No buttons
+      // Attach popup functionality to the REAL/FAKE buttons
       const buttons = document.querySelectorAll('.buttons button');
       buttons.forEach((button) => {
-        button.addEventListener('click', function () {
-          const currentImage = slides[currentSlide].querySelector('img');
+        button.addEventListener("click", function () {
+          const currentImage = slides[currentSlide].querySelector("img");
           const imagePath = currentImage.src; // Full image path
-          const folderName = imagePath.split('/').slice(-2, -1)[0]; // Extract folder name ('Real' or 'Fake')
+          const imageName = imagePath.split("/").pop().toLowerCase(); // Extract the filename
+          const folderName = imagePath.split("/").slice(-2, -1)[0].toLowerCase(); // Extract folder name (real or fake)
 
-          const isFake = folderName === 'Fake'; // Determine correctness based on folder
-          const userSelectedFake = button.textContent === 'FAKE'; // User's choice
+          console.log("Image Path:", imagePath); // Debugging
+          console.log("Folder Name:", folderName); // Debugging
+
+          const isFake = folderName === "fake"; // Check if the folder is "Fake"
+          const userSelectedFake = button.textContent.trim().toLowerCase() === "fake"; // Check if user clicked "FAKE"
+
+          console.log("Is Fake:", isFake); // Debugging
+          console.log("User Selected Fake:", userSelectedFake); // Debugging
+
+          const explanation = explanations[imageName] || "No additional information available.";
 
           if (isFake === userSelectedFake) {
-            showPopup(`Correct! This image is ${folderName.toLowerCase()}.`);
+            showPopup(`Correct! ${explanation}`);
           } else {
-            showPopup(`Sorry, that is incorrect. This image is ${folderName.toLowerCase()}.`);
+            showPopup(`Sorry, that is incorrect. ${explanation}`);
           }
         });
       });
