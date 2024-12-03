@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 1
+date: 2024-12-02
+img: snopes.png
+alt: image-alt
+
+description: snopes.com - Investigates rumors, myths, and misinformation online.
+---
