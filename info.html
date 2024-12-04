@@ -10,7 +10,8 @@ permalink: /info.html
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "
+  /style.css" | relative_url }}">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,55 +19,75 @@ permalink: /info.html
       margin: 0;
       padding-top: 120px;
     }
+
     h1 {
       margin-top: 20px;
       font-size: 2em;
     }
+
     h1, h2, h3, h4, li, p {
       color: #1b1b16;
     }
+
     .content-wrapper {
       display: flex;
       justify-content: space-between;
       padding: 20px;
     }
+
     .left-column, .right-column {
       width: 48%;
       padding: 10px;
       background-color: #f7f7f7;
       border-radius: 10px;
     }
+
     .left-column h2, .right-column h2 {
       font-size: 1.5em;
       margin-bottom: 10px;
     }
+
     .left-column p, .right-column p {
       font-size: 1em;
       line-height: 1.5;
     }
+
     .resources {
       margin-top: 30px;
       background-color: #f7f7f7;
       border-radius: 10px;
       padding: 20px;
     }
+
     .resources h2 {
       font-size: 1.5em;
     }
+
     .resources ul {
       list-style-type: none;
       padding: 0;
     }
+
     .resources ul li {
       font-size: 1em;
       margin: 5px 0;
     }
+
     .resources a {
       color: #0056b3;
       text-decoration: none;
     }
+
     .resources a:hover {
       text-decoration: underline;
+    }
+
+    footer h3, footer p {
+      color: #ffffff !important;
+    }
+
+    footer {
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
   </style>
 </head>
