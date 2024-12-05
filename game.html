@@ -281,7 +281,7 @@
     </div>
     <!-- Slide 3 -->
     <div class="slide">
-      <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 3" style="width:100%">
+      <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 3" style="width:100%">
       <div class="buttons">
         <button>REAL</button>
         <button>FAKE</button>
@@ -289,7 +289,7 @@
     </div>
     <!-- Slide 4 -->
     <div class="slide">
-      <img src="/disinformation-hub/img/Fake/fake4.jpeg" alt="Slide 4" style="width:100%">
+      <img src="/disinformation-hub/img/Real/waikiki_old.jpg" alt="Slide 4" style="width:100%">
       <div class="buttons">
         <button>REAL</button>
         <button>FAKE</button>
@@ -375,7 +375,9 @@
       "real2.jpg": "This is a real photo of Chief's Tight End Travis Kelce.",
       "waikiki_old.jpg": "This photo is real and shows Waikiki in the old days.",
       "fake4.jpeg": "Although this picture looks believable, the physical features of Waikiki and Diamond Head are different to reality. The picture also is not a crisp as a photograph, it instead looks more like a painting.",
-      "fake5.jpeg": "The background has been artificially blurred to hide inconsistencies."
+      "fake5.jpeg": "The background has been artificially blurred to hide inconsistencies.",
+      "fake2.jpeg": "This is a fake image of Max Holloway winning the title belt in his most recent fight. Notice how the belt around his chest does not have any bands to hold it on, it is simply free floating. Additionally, notice how smooth his skin looks, its almost like a painting. Finally, if you pay attention to the UFC you would know that Max lost his last fight so this image is factually incorrect.",
+      "ducky.jpg": "This is a real image of an inflatable duck on the water in Hong Kong. Notice how crisp and real looking the image is."
     };
 
     // Function to show the popup
@@ -457,10 +459,10 @@
           // Hard-code logic for specific slides
           if (currentSlide === 7) { // Slide 8
             isFake = true;
-            explanation = "This video contains signs of disinformation, such as out-of-context content.";
+            explanation = "This video contains signs of disinformation, such as out-of-context content and offers that are too good to be true.";
           } else if (currentSlide === 8) { // Slide 9
             isFake = true;
-            explanation = "This video includes misleading information and should be carefully evaluated.";
+            explanation = "This video is fake because no there is no octopus this large that exists on earth today. Also, notice how the head of the octopus changes whenever the video changes reference frames.";
           } else {
             // Process images as before
             const currentElement = slides[currentSlide].querySelector("img");
